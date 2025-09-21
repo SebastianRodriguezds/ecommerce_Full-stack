@@ -34,7 +34,6 @@ const Search = () => {
 
                 <ProductCards products={filteredProducts}/>
             </section>
-
         </>
     )
 }
