@@ -1,7 +1,7 @@
 import React from 'react'
 import OrderSummary from './OrderSummary'
 import { useDispatch } from 'react-redux'
-import { updateQuantity, removeFromCart, clearCart } from '../../redux/features/cart/cartSlice'
+import { updateQuantity, removeFromCart } from '../../redux/features/cart/cartSlice'
 
 const CartModel = ({ products, isOpen, onClose }) => {
     const dispatch = useDispatch();
