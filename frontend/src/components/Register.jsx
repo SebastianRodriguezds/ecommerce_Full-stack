@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { useRegisterUserMutation } from '../redux/features/cart/auth/authApi';
+import { useRegisterUserMutation } from '../redux/features/auth/authApi';
 
 const Register = () => {
     const [message, setMessage] = useState('');
