@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import productsData from '../../data/products.json'
 import ProductCards from '../shop/ProductCards'
 import ShopFiltering from './ShopFiltering';
 import { useFetchAllProductsQuery } from '../../redux/features/products/productAPI';
@@ -61,6 +60,7 @@ const ShopPage = () => {
 
   const startProduct = (currentPage - 1) * productsPerPage + 1;
   const endProduct = startProduct + products.length - 1;
+  console.log("Productos que se envían a ProductCards:", products);
 
   return (
     <>

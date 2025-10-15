@@ -55,7 +55,7 @@ router.post("/post-review", async (req, res) => {
 });
 
 // total reviews count
-router.get("/total-reviewa", async (req, res) => {
+router.get("/total-reviews", async (req, res) => {
     try {
         const totalReviews = await Reviews.countDocuments({});
         res.status(200).send({ totalReviews });

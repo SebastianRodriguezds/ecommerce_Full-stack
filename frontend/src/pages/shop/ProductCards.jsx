@@ -4,17 +4,21 @@ import RatingsStars from '../../components/RatingsStars'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../redux/features/cart/cartSlice'
 
+
 const ProductCards = ({ products }) => {
+    console.log("Product in card:",products)
     const dispatch = useDispatch();
+    // console.log("Product in card after dispatch:",products)
 
     const handleAddToCart = (product)=>{
         dispatch(addToCart(product))
     }
-    console.log(products)
+    
     return (
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ls:grid-cols-4 gap-8'>
             {
                 products.map((product, index)=> (
+                    
                     <div className="product__card" key={index}>
                         <div className='relative'>
                             <Link to={`/shop/${product._id}`}>
@@ -31,10 +35,7 @@ const ProductCards = ({ products }) => {
                                     <i className='ri-shopping-cart-2-line bg-primary p-1.5 text-white hover:bg-primary-dark'></i>
                                 </button>
                             </div>
-
-
                         </div>
-
                         <div className='product__card__content'>
                             <h4>{product.name}</h4>
                             <p>${product.price} {product?.oldPrice ? <s>${product?.oldPrice}</s> : null}</p>

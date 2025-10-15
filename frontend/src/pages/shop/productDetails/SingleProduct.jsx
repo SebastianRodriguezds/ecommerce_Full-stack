@@ -3,18 +3,20 @@ import RatingsStars from '../../../components/RatingsStars';
 import { useDispatch } from 'react-redux'
 import { useFetchProductByIdQuery } from '../../../redux/features/products/productAPI';
 import { addToCart } from '../../../redux/features/cart/cartSlice';
+import ReviewsCard from '../reviews/ReviewsCard';
 
 const SingleProduct = () => {
     const { id } = useParams();
+    console.log("Product ID from params:", id);
 
-    const distpatch = useDispatch();
+    const dispatch = useDispatch();
     const { data, error, isLoading } = useFetchProductByIdQuery(id);
+    console.log("Data received from API:", data);
 
     const singleProduct = data?.product || {};
     const productReviews = data?.reviews || [];
-
     const handleAddToCart = (product)=> {
-        distpatch(addToCart(product));
+        dispatch(addToCart(product));
     }
 
     if (isLoading) return <p>Loading...</p>
@@ -35,7 +37,7 @@ const SingleProduct = () => {
             </section>
 
             <section className='section__container mt-8'>
-                <div className='flex flex-col items-center mdLflex-row gap-8'>
+                <div className='flex flex-col items-start md:flex-row gap-8'>
                     {/* product image */}
                     <div className='md:w-1/2 w-full'>
                         <img src={singleProduct?.image} alt=""
@@ -69,13 +71,12 @@ const SingleProduct = () => {
                             Add to Cart
                         </button>
 
-                        {/* display Review */}
-                        {/* TODO:  */}
-                        <section className='section__container mt-8'>
-                            Reviews Here
-                        </section>
                     </div>
                 </div>
+                        {/* display Review */}
+                        <section className='section__container mt-2'>
+                            <ReviewsCard productReviews = {productReviews}></ReviewsCard>
+                        </section>
             </section>
         </>
     )

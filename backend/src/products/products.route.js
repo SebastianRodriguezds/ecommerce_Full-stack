@@ -67,6 +67,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
         const productId = req.params.id;
+        console.log("product Id del producto: " , productId)
         const product = await Products.findById(productId).populate("author", "email username");
         if (!product) {
             return res.status(404).send({ message: "Product not found" });
