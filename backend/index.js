@@ -6,7 +6,7 @@ require('dotenv').config()
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 5000;
-const allowedOrigins = ["http://localhost:5173", "https://ecommerce-full-lbb.netlify.app/"]
+const allowedOrigins = ["http://localhost:5173", "https://ecommerce-full-lbb.netlify.app"]
 
 //middleware setup
 app.use(express.json({limit: "25mb"}));
