@@ -65,7 +65,7 @@ const Navbar = () => {
           <li className='link'><Link to={"/contact"}>Contact</Link></li>
         </ul>
         <div className='nav__logo'>
-          <Link to={"/"}>Lebaba<span>.</span></Link>
+          <Link to={"/"}>Babao<span>.</span></Link>
         </div>
 
         {/* { nav icons } */}

@@ -7,17 +7,18 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        'screen-2xl': '1400px', 
-        'custom-1200': '1200px', 
-        'custom-900': '900px', 
+        'screen-2xl': '1400px',
+        'custom-1200': '1200px',
+        'custom-900': '900px',
       },
       colors: {
-        'primary': '#ed3849',
-        'primary-dark': "#d23141",
-        'primary-light': '#f4e5ec',
-        'text-dark': '#0f172a',
-        'text-light': '#64748b',
-        'extra-light': '#f8fafc'
+        'primary': '#4f46e5',       
+        'primary-dark': '#3730a3',   
+        'primary-light': '#ede9fe',  
+        'secondary': '#f59e0b',      
+        'text-dark': '#111827',      
+        'text-light': '#6b7280',     
+        'extra-light': '#f9fafb'     
       }
     },
   },

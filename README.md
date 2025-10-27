@@ -3,7 +3,7 @@ Lebaba Ecommerce is a full-stack ecommerce web application built with the **MERN
 
 --
 # LIVE DEMO 
-👉 [Visit the deployed site](https://ecommerce-full-lbb.netlify.app/)
+👉 [Visit the deployed site](https://ecommerce-full-bbo.netlify.app/)
 
 # FEATURES
 ### ✅ Implemented
